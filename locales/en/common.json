@@ -1,0 +1,233 @@
+{
+  "header": {
+    "phone": "(+212) 670687954",
+    "email": "tabridrraha@airepair.com",
+    "location": "Rabat MA"
+  },
+  "navbar": {
+    "home": "Home",
+    "aboutUs": "About Us",
+    "services": "Services",
+    "reviews": "Reviews",
+    "contact": "Contact",
+    "orderNow": "Contact Us Now!",
+    "repair": "Repair",
+    "airConditioningInstallation": "Air Conditioning Installation"
+  },
+  "hero": {
+    "trusted": "Trusted",
+    "experts": "Experts",
+    "specialists": "Specialists",
+    "professionals": "Professionals",
+    "forAllYour": "for All Your",
+    "repair": "Repair",
+    "needs": "Needs",
+    "description": "Our technicians provide reliable solutions for appliance issues, ensuring efficient repairs with expertise.",
+    "description2": "Your satisfaction is our priority.",
+    "mobileDescription": "All repairs fixed in hours—guaranteed!",
+    "orderNow": "Contact Us Now!"
+  },
+  "page": {
+    "repairingBrands": "Repairing Your Trusted Brands!"
+  },
+  "features": {
+    "title": "Explore Our Features for Quality !",
+    "description": "At TABRID RRAHA, we pride ourselves on delivering top-notch appliance repair services. Our features are designed to ensure quality and convenience, providing you with fast, reliable solutions for all your appliance needs.",
+    "mobileDescription": "TABRID RRAHA delivers top-quality appliance repairs—fast, reliable, and convenient.",
+    "trackIssues": {
+      "title": "Track issues effectively",
+      "description": "We simplify tracking and managing your appliance issues with our latest tools"
+    },
+    "skeletonOne": {
+      "title": "The",
+      "titleHighlight": "Appliance Repair",
+      "titleEnd": "Experts You Can Trust",
+      "description": "We offer a full range of appliance repair services by certified professionals, including refrigerators, washers, and dryers. Our expertise extends to dishwashers and ovens. Simply fill out our form to start the process. Experience easy and convenient service today!",
+      "quote": "We offer quick, reliable appliance repairs with clear, upfront pricing. As your local experts, we're dedicated to your satisfaction!."
+    },
+    "skeletonThree": {
+      "titleHighlight": "We Are Here",
+      "titleEnd": "For Every Season",
+      "description": "At TABRID RRAHA, we pride ourselves on being your reliable partner for all your appliance repair needs, no matter the season. Our skilled technicians are available year-round to ensure your appliances are functioning optimally.",
+      "button": "Contact Us Now!"
+    },
+    "skeletonFour": {
+      "description": "Choose professional appliance repair services for peace of mind and reliable solutions. Your appliances deserve the best!",
+      "affordable": {
+        "title": "Affordable",
+        "description": "Quality repairs, unbeatable prices."
+      },
+      "professional": {
+        "title": "Professional",
+        "description": "Precision in every repair, your appli-ances deserve the best!"
+      },
+      "highQuality": {
+        "title": "High Quality",
+        "description": "High-quality appliance repair, guaranteed."
+      }
+    }
+  },
+  "secondSection": {
+    "title": "Providing comprehensive appliance repair solutions",
+    "description": "Our services encompass a wide array af machines tailored to meet your needs."
+  },
+  "thirdSection": {
+    "successfulProject": "Successful Project",
+    "happyClients": "Happy Clients",
+    "mainTitle": "Trust Us To Install Your Air Conditioning",
+    "description": "Choose us for air conditioning installation and enjoy hassle-free experience. Our commitment to your comfort ensures your system will keep you cool for years to come!",
+    "professionalInstallation": {
+      "title": "Professional Installation",
+      "description": "Our expert technicians provide a seamless installation experience that you can rely on for precision and quality."
+    },
+    "customerSatisfaction": {
+      "title": "Customer Satisfaction",
+      "description": "We prioritize your satisfaction with a commitment to quality service and ongoing support."
+    },
+    "locations": "Bringing our services to Rabat, Temara, Salé, and Kenitra!"
+  },
+  "forthSection": {
+    "discover": "Discover",
+    "exclusiveFeatures": "Exclusive Features,",
+    "unmatchedQuality": "Unmatched Quality!",
+    "projects": {
+      "airConditioning": {
+        "title": "Air Conditioning",
+        "description": "Air conditioning service includes maintenance, repair, and installation of AC systems to ensure optimal performance and comfort."
+      },
+      "acInstallation": {
+        "title": "AC Installation",
+        "description": "AC installation involves setting up air conditioning units, ensuring proper placement, connectivity, and efficient operation in a space."
+      },
+      "hvacMaintenance": {
+        "title": "HVAC Maintenance",
+        "description": "HVAC maintenance ensures efficient operation of heating, ventilation, and air conditioning systems through regular servicing."
+      },
+      "furnaceInstallation": {
+        "title": "Furnace Installation",
+        "description": "Furnace installation involves setting up a heating system to provide warmth in residential or commercial spaces."
+      },
+      "furnaceRepair": {
+        "title": "Furnace Repair",
+        "description": "Furnace repair involves diagnosing and fixing issues to restore the heating system's functionality and efficiency."
+      },
+      "indoorAirQuality": {
+        "title": "Indoor Air Quality",
+        "description": "We deliver tailored solutions to enhance indoor air quality, ensuring healthier and more comfortable living spaces by reducing pollutants and allergens."
+      }
+    }
+  },
+  "fifthSection": {
+    "title": "Our Working Process: A Step-by-Step Overview",
+    "howWeWork": "How We Work",
+    "scheduleAppointment": {
+      "title": "Schedule your appointment",
+      "description": "Begin your journey to seamless service by booking a personalized appointment tailored to your schedule."
+    },
+    "getConfirmation": {
+      "title": "Get confirmation",
+      "description": "We will contact you to confirm to secure your slot, ensuring that our commitment to you is solid."
+    },
+    "weRepair": {
+      "title": "We repair",
+      "description": "Sit back and relax while our skilled technicians work their magic, transforming your concerns into solutions."
+    },
+    "qualityService": {
+      "title": "Quality Service, Affordable Prices",
+      "description": "We offer Quality Service at Affordable Prices. Our dedicated team ensures exceptional customer experiences with reliable, knowledgeable support tailored to your needs. With transparent pricing and no hidden fees, you can trust that you're getting great value. Choose us for top-notch service that fits your budget!",
+      "point1": "Quality repairs that won't break the bank.",
+      "point2": "Affordable solutions for everyone.",
+      "point3": "Top-notch service at unbeatable prices.",
+      "point4": "Building lasting relationships through affordability."
+    }
+  },
+  "sixthSection": {
+    "title": "Loved by people all over our region",
+    "description": "Join the many satisfied customers in our region who rely on us for dependable appliance repair. With years of experience and expertise, we tackle every job with care and precision. Our commitment to quality service ensures your satisfaction every time!"
+  },
+  "contact": {
+    "tag": "Contact a skills expert",
+    "heading": "Need appliance repair?",
+    "description": "Fill out our form to get fast and professional service you can trust.",
+    "contactUs": "Contact us!",
+    "name": "Name",
+    "email": "Email address",
+    "phone": "Phone",
+    "chooseServices": "Choose Services",
+    "message": "Message",
+    "submit": "Submit",
+    "enterName": "Enter your name",
+    "enterEmail": "Enter your email",
+    "enterPhone": "Enter your phone number",
+    "enterMessage": "Enter your message",
+    "selectService": "Select a service",
+    "location": {
+      "title": "Find Us",
+      "subtitle": "Visit our shop",
+      "address": "Rabat, Morocco",
+      "description": "We're located in the heart of Rabat, ready to serve you with professional appliance repair services."
+    },
+    "whatsapp": {
+      "title": "Need a Quick Reply?",
+      "description": "Chat with us on WhatsApp for instant assistance",
+      "button": "Chat on WhatsApp",
+      "subtitle": "Get instant help"
+    }
+  },
+  "services": {
+    "refrigeratorRepair": "Refrigerator Repair",
+    "washerRepair": "Washer Repair",
+    "airConditionerRepair": "Air Conditioner Repair",
+    "freezerRepair": "Freezer Repair",
+    "dishwasherRepair": "Dishwasher Repair",
+    "dryerRepair": "Dryer Repair",
+    "ovenRepair": "Oven Repair",
+    "stoveRangeRepair": "Stove and Range Repair",
+    "microwaveRepair": "Microwave Repair"
+  },
+  "bentoGrid": {
+    "refrigeratorRepair": {
+      "title": "Refrigerator Repair",
+      "description": "Refrigerator repair ensures efficient cooling and functionality, preserving your food and extending appliance life."
+    },
+    "stoveRangeRepair": {
+      "title": "Stove and Range Repair",
+      "description": "Stove and range repair involves diagnosing and fixing issues with cooking appliances, ensuring they operate safely and efficiently."
+    },
+    "ovenRepair": {
+      "title": "Oven Repair",
+      "description": "Oven repair entails diagnosing and fixing problems with baking appliances to restore their functionality and ensure even cooking."
+    },
+    "dishwasherRepair": {
+      "title": "Dishwasher Repair",
+      "description": "Dishwasher repair involves troubleshooting and fixing issues to restore proper cleaning and drainage functions in dishwashing appliances."
+    },
+    "washerRepair": {
+      "title": "Washer Repair",
+      "description": "Washer repair includes diagnosing and fixing issues to restore efficient washing and spinning functions in laundry machines."
+    },
+    "dryerRepair": {
+      "title": "Dryer Repair",
+      "description": "Dryer repair involves diagnosing and fixing issues to ensure efficient drying and proper functioning of clothes drying appliances."
+    },
+    "microwaveRepair": {
+      "title": "Microwave Repair",
+      "description": "Microwave repair entails diagnosing and fixing problems to restore proper heating and cooking functions in microwave appliances."
+    },
+    "freezerRepair": {
+      "title": "Freezer Repair",
+      "description": "Freezer repair involves diagnosing and fixing issues to ensure optimal cooling and preservation of frozen foods in freezing appliances."
+    },
+    "airConditionerRepair": {
+      "title": "Air Conditioner Repair",
+      "description": "Air conditioner repair includes diagnosing and fixing issues to restore effective cooling and climate control in air conditioning units."
+    }
+  },
+  "formCard": {
+    "emailPlaceholder": "Email",
+    "phonePlaceholder": "Phone",
+    "namePlaceholder": "Name",
+    "button": "Schedule Your Installation Session"
+  }
+}
+

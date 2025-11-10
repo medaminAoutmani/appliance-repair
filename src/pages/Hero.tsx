@@ -1,3 +1,4 @@
+"use client";
 import Image from 'next/image'
 import React from 'react'
 import background1 from '../../public/Background-1.png'
@@ -9,14 +10,33 @@ import WordRotate from '@/components/ui/text/word-rotate'
 import MagicButton from '@/components/ui/MagicButton'
 import BoxReveal from '@/components/ui/box-reveal'
 import { MotionDiv } from '@/lib/framer-motion'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 
 
 function Hero() {
+  const { t, language } = useLanguage();
+
+  const scrollToContact = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    const element = document.getElementById('contact');
+    if (!element) return;
+
+    const yOffset = -80;
+    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+    const targetPosition = elementPosition + yOffset;
+
+    window.scrollTo({
+      top: targetPosition < 0 ? 0 : targetPosition,
+      behavior: 'smooth',
+    });
+  };
+
   return (
 
     <MotionDiv
-      className="relative w-full lg:max-h-[580px] md:h-[80vh] lg:h-[52vh] xl:h-[90vh] bg-[url('/white-bg.png')] bg-cover bg-center bg-[#e5ebf5] flex justify-center items-center flex-col overflow-hidden mx-auto "
+      id="hero"
+      className="relative w-full md:h-fit lg:h-[85vh] xl:h-[90vh] bg-[url('/white-bg.png')] bg-cover bg-center bg-[#e5ebf5] flex justify-center items-center flex-col overflow-hidden mx-auto "
       initial={{ opacity: 0, y: '100vh' }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
@@ -24,17 +44,17 @@ function Hero() {
     >
       <BackgroundBeamsWithCollision className="h-full">
         <div className='relative w-full lg:w-[90%] xl:w-[79%] h-full flex items-center justify-center  lg:flex-row flex-col'>
-          <div className='relative max-w-3xl w-[70%] h-fit lg:h-full flex flex-col items-center lg:items-start justify-center lg:justify-start pt-[70px] xl:pt-[100px] gap-5 text-left text-6xl xl:text-[72px] text-[#1c1f48] leading-[72px]  font-bold  font-lato'>
+          <div className='relative w-[90%] sm:w-[95%] md:w-[80%] h-fit lg:h-full flex flex-col items-center lg:items-start justify-center lg:justify-start pt-[70px] xl:pt-[100px] gap-5 text-left text-6xl xl:text-[72px] text-[#1c1f48] leading-[72px]  font-bold  font-lato'>
             <BoxReveal boxColor={"#04cf9c"} duration={0.7} delay={0.5}>
-              <div className='relative text-wrap items-center lg:items-start justify-center flex flex-col'>
-                <div className='relative w-[575px] lg:w-[690px] xl:w-[690px] flex flex-row items-center justify-start'>
-                  <span className='left-0 text-6xl lg:text-6xl xl:text-7xl'>Trusted </span>
+              <div className={`relative text-wrap items-center lg:items-start justify-center flex flex-col`}>
+                <div className={`relative flex flex-row items-center justify-start ${language == 'en' ? 'w-[400px] sm:w-[575px] xl:w-[690px]' : 'w-[380px] sm:w-[590px] lg:w-[680px]'}`}>
+                  <span className='left-0 text-4xl sm:text-6xl lg:text-6xl xl:text-7xl'>{t('hero.trusted')} </span>
                   <WordRotate
-                    className="ml-3 bg-gradient-to-t from-[#08ac86] via-[#1c7872] to-[#3b3e61] bg-clip-text text-transparent dark:text-white"
-                    words={["Experts", "Specialists", "Professionals"]}
+                    className={` ml-3 bg-gradient-to-t from-[#08ac86] via-[#1c7872] to-[#3b3e61] bg-clip-text text-transparent dark:text-white ${language == 'en' ? 'text-4xl sm:text-6xl py-1' : 'text-4xl sm:text-6xl lg:text-[66px] lg:leading-[1] py-0'}`}
+                    words={[t('hero.experts'), t('hero.specialists'), t('hero.professionals')]}
                   />
                 </div>
-                <h4 className=' flex text-[42px] xl:text-[43px] leading-[45px] flex-row'> for All Your <span className='hidden lg:flex px-2'>Repair</span> Needs</h4>
+                <h4 className={`flex ${language == 'en' ? 'text-3xl sm:text-[42px] xl:text-[43px] leading-[45px] flex-row' : 'text-3xl sm:text-4xl flex-col text-center'}`}> {t('hero.forAllYour')} <span className={`hidden lg:flex ${language == 'en' ? 'px-2' : ''}`}>{t('hero.repair')}</span> {language == 'en' ? t('hero.needs') : null}</h4>
               </div>
             </BoxReveal>
             <BoxReveal boxColor={"#04cf9c"} duration={0.7} delay={0.5}>
@@ -48,26 +68,27 @@ function Hero() {
                     height={50}
                   />
                 </div>
-                <div className='flex w-full lg:w-[60%] flex-col items-start justify-center'>
-                  <p className='hidden lg:flex items-center leading-7 justify-center text-base font-normal text-[#7a7a7a]'>
-                    Our technicians provide reliable solutions for appliance issues, ensuring efficient repairs with expertise.
+                <div className='flex w-full lg:w-[60%] flex-col items-start justify-center leading-6 text-base font-normal text-[#7a7a7a]'>
+                  <p className={`hidden lg:flex items-center justify-center `}>
+                    {t('hero.description')}
                   </p>
-                  <p className='hidden lg:flex items-center justify-center text-base leading-7 font-normal text-[#7a7a7a]'>
-                    Your satisfaction is our priority.
+                  <p className='hidden lg:flex items-center justify-center'>
+                    {t('hero.description2')}
                   </p>
-                  <p className='lg:hidden flex w-full items-center leading-7 justify-center text-base text-center font-normal text-[#7a7a7a]'>
-                    All repairs fixed in hours—guaranteed!
+                  <p className='lg:hidden flex w-full items-center justify-center text-center '>
+                    {t('hero.mobileDescription')}
                   </p>
                 </div>
               </div>
             </BoxReveal>
             <BoxReveal boxColor={"#04cf9c"} duration={0.7} delay={0.5}>
-              <div className='flex lg:items-start xl:items-end  h-24 lg:h-20'>
+              <div className='flex items-start lg:items-start justify-center lg:justify-start h-24 lg:h-20'>
                 <MagicButton
-                  button="felx h-20 lg:h-14 w-56 lg:w-40 z-10 "
+                  button="felx h-16 lg:h-14 w-52 lg:w-44 z-10 "
                   border="bg-[conic-gradient(from_90deg_at_50%_50%,#FFFFFF_0%,#04cf9c_50%,#FFFFFF_100%)] "
                   content="bg-[#f2f2f2] text-[#1c1f48] hover:bg-[#04cf9c] text-2xl font-extrabold lg:text-lg"
-                  title="Order Now"
+                  title={t('hero.orderNow')}
+                  onClick={scrollToContact}
                 />
               </div>
 

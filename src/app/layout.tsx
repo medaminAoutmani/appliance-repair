@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { LanguageProviderWrapper } from "@/components/providers/LanguageProviderWrapper";
+import Script from "next/script";
 
 
 
@@ -15,9 +17,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-      >
+      <body>
+        <Script
+          src="https://elfsightcdn.com/platform.js"
+          strategy="lazyOnload"
+          async
+        />
+        <LanguageProviderWrapper>
         {children}
+        </LanguageProviderWrapper>
       </body>
     </html>
   );

@@ -2,6 +2,7 @@
 
 import { JSX, useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "motion/react";
+import styles from "./box-reveal.module.css";
 
 interface BoxRevealProps {
   children: JSX.Element;
@@ -13,7 +14,7 @@ interface BoxRevealProps {
 
 export const BoxReveal = ({
   children,
-  width = "fit-content",
+  width = "100%",
   boxColor,
   duration,
   delay,
@@ -21,7 +22,7 @@ export const BoxReveal = ({
   const mainControls = useAnimation();
   const slideControls = useAnimation();
 
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
@@ -34,8 +35,18 @@ export const BoxReveal = ({
     }
   }, [isInView, mainControls, slideControls]);
 
+  useEffect(() => {
+    if (ref.current) {
+      ref.current.style.setProperty('--box-width', width);
+      ref.current.style.setProperty('--box-color', boxColor || '#5046e6');
+    }
+  }, [width, boxColor]);
+
   return (
-    <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
+    <div
+      ref={ref}
+      className={styles.boxReveal}
+    >
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 75 },
@@ -57,15 +68,7 @@ export const BoxReveal = ({
         initial="hidden"
         animate={slideControls}
         transition={{ duration: duration ? duration : 0.5, ease: "easeIn" }}
-        style={{
-          position: "absolute",
-          top: 4,
-          bottom: 4,
-          left: 0,
-          right: 0,
-          zIndex: 20,
-          background: boxColor ? boxColor : "#5046e6",
-        }}
+        className={styles.slideBox}
       />
     </div>
   );
