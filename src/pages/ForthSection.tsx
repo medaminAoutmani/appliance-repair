@@ -1,5 +1,5 @@
 "use client";
-import { HoverEffect } from '@/components/ui/card-hover-effect'
+import { HoverEffect } from '@/components/ui/cardHoverEffect'
 import React from 'react'
 import { useLanguage } from '@/contexts/LanguageContext';
 
