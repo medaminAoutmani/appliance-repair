@@ -4,7 +4,6 @@ import React from 'react'
 import background1 from '../../public/Background-1.png'
 import repairMan from '../../public/repair-man2.png'
 import repairManMobile from '../../public/repair-man-mobile.png'
-import Typewriter from '@/lib/Typewriter'
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import WordRotate from '@/components/ui/text/word-rotate'
 import MagicButton from '@/components/ui/MagicButton'

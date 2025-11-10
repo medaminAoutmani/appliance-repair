@@ -11,8 +11,8 @@ import { useLanguage } from '@/contexts/LanguageContext';
 function SecondeSection() {
   const { t } = useLanguage();
   
-  let reftitle = useRef(null);
-  let refContent = useRef(null);
+  const reftitle = useRef(null);
+  const refContent = useRef(null);
   const isInViewTitle = useInView(reftitle, { once: true });
   const isInViewContent = useInView(refContent, { once: true });
 
@@ -30,7 +30,7 @@ function SecondeSection() {
         opacity: 1, y: 0
       })
     }
-  }, [isInViewTitle, isInViewContent])
+  }, [isInViewTitle, isInViewContent, TitleControl, ContentControl])
   return (
     <section id='repair' className='w-full h-full flex flex-col items-center justify-center py-8 sm:py-10 md:py-16 lg:py-20 xl:pb-40 bg-dotted-spacing-[9px]'>
       <div className='relative h-full w-[95%] lg:w-[90%] xl:w-[79%] flex flex-col items-center justify-center'>
