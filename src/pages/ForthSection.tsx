@@ -1,69 +1,63 @@
+"use client";
 import { HoverEffect } from '@/components/ui/card-hover-effect'
 import React from 'react'
+import { useLanguage } from '@/contexts/LanguageContext';
 
 function ForthSection() {
-  return (
-    <section className='w-full h-full flex flex-col items-center justify-center pb-10 lg:pb-[100px] lg:pt-32 '>
-      <div className=' relative h-full lg:w-[90%] xl:w-[79%] flex flex-col items-center justify-center' >
-        <div className="flex items-center text-center gap-2 justify-center mb-5 font-lato lg:text-4xl xl:text-5xl lg:font-bold xl:font-extrabold text-[#1c1f48]">
+  const { t, language } = useLanguage();
 
-          Discover
-          <div className="bg-gradient-to-r text-nowrap from-[#08ac86] via-[#136369] to-[#193351] bg-clip-text text-transparent mx-1">
-            Exclusive Features,
+  return (
+    <section className='w-full h-full flex flex-col items-center justify-center pb-10 lg:pb-[100px] pt-28 md:pt-32 '>
+      <div className=' relative h-full w-full lg:w-[90%] xl:w-[79%] flex flex-col items-center justify-center px-2 sm:px-0' >
+        <div className={`flex ${language == 'en' ? 'flex-col sm:flex-row ' : 'flex-col '} items-center  text-center gap-2 justify-center mb-0 lg:mb-5 font-lato text-xl sm:text-[28px] md:text-[32px] lg:text-4xl xl:text-5xl font-semibold sm:font-bold xl:font-extrabold text-[#1c1f48]`}>
+          <div className='flex flex-row gap-0 md:gap-1 lg:gap-2'>
+            {t('forthSection.discover')}
+            <div className="bg-gradient-to-r text-nowrap from-[#08ac86] via-[#136369] to-[#193351] bg-clip-text text-transparent mx-1">
+              {t('forthSection.exclusiveFeatures')}
+            </div>
           </div>
-          Unmatched Quality!
+          {t('forthSection.unmatchedQuality')}
         </div>
 
 
-        <div className="w-full mx-auto ">
-          <HoverEffect items={projects} />
+        <div className="w-full sm:mx-auto sm:px-4 md:px-0">
+          <HoverEffect items={getProjects(t)} />
         </div>
       </div>
     </section>
   )
 }
 
-export const projects = [
+export const getProjects = (t: (key: string) => string) => [
   {
     icon: '/technical.svg',
-    title: "Air Conditioning",
-    description:
-      "Air conditioning service includes maintenance, repair, and installation of AC systems to ensure optimal performance and comfort.",
+    title: t('forthSection.projects.airConditioning.title'),
+    description: t('forthSection.projects.airConditioning.description'),
   },
   {
     icon: '/service-tool1.svg',
-    title: "AC Installation",
-    description:
-      "AC installation involves setting up air conditioning units, ensuring proper placement, connectivity, and efficient operation in a space.",
-
+    title: t('forthSection.projects.acInstallation.title'),
+    description: t('forthSection.projects.acInstallation.description'),
   },
   {
     icon: '/fix1.svg',
-    title: "HVAC Maintenance",
-    description:
-      "HVAC maintenance ensures efficient operation of heating, ventilation, and air conditioning systems through regular servicing.",
-
+    title: t('forthSection.projects.hvacMaintenance.title'),
+    description: t('forthSection.projects.hvacMaintenance.description'),
   },
   {
     icon: '/settings.svg',
-    title: "Furnace Installation",
-    description:
-      "Furnace installation involves setting up a heating system to provide warmth in residential or commercial spaces.",
-
+    title: t('forthSection.projects.furnaceInstallation.title'),
+    description: t('forthSection.projects.furnaceInstallation.description'),
   },
   {
     icon: '/service.svg',
-    title: "Furnace Repair",
-    description:
-      "Furnace repair involves diagnosing and fixing issues to restore the heating system's functionality and efficiency.",
-
+    title: t('forthSection.projects.furnaceRepair.title'),
+    description: t('forthSection.projects.furnaceRepair.description'),
   },
   {
     icon: '/form.svg',
-    title: "Indoor Air Quality",
-    description:
-      "We deliver tailored solutions to enhance indoor air quality, ensuring healthier and more comfortable living spaces by reducing pollutants and allergens.",
-
+    title: t('forthSection.projects.indoorAirQuality.title'),
+    description: t('forthSection.projects.indoorAirQuality.description'),
   },
 ];
 

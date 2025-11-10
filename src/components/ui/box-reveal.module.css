@@ -1,0 +1,16 @@
+.boxReveal {
+  position: relative;
+  overflow: hidden;
+  width: var(--box-width, fit-content);
+}
+
+.slideBox {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background-color: var(--box-color, #5046e6);
+}
+

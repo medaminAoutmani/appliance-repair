@@ -11,11 +11,14 @@ import ThirdSection from "@/pages/ThirdSection";
 import ForthSection from "@/pages/ForthSection";
 import FifthSection from "@/pages/FifthSection";
 import SixthSection from "@/pages/SixthSection";
+import SeventhSection from "@/pages/SeventhSection";
 import { MotionDiv } from "@/lib/framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 
 export default function Home() {
   const [loading, setLoading] = useState(true)
+  const { language, t } = useLanguage();
 
   useEffect(() => {
     setTimeout(() => setLoading(false), 7000)
@@ -24,7 +27,7 @@ export default function Home() {
   return (
     <>
       {!loading ? (
-        <main className="relative w-full  bg-white flex justify-center items-center flex-col  overflow-hidden mx-auto ">
+        <main key={language} className="relative w-full  bg-white flex justify-center items-center flex-col  overflow-hidden mx-auto ">
           <div className="w-full h-full">
             <Header />
             <Hero />
@@ -37,7 +40,7 @@ export default function Home() {
               <CarouselDemo />
               <div className="hidden lg:flex items-center justify-end xl:w-auto lg:w-52 xl:flex-grow ">
                 <div className="flex items-center justify-center lg:w-[95%] xl:w-[80%] text-center font-semibold text-white lg:text-[22px] xl:text-2xl">
-                  Repairing Your Trusted Brands!
+                  {t('page.repairingBrands')}
                 </div>
               </div>
             </MotionDiv>
@@ -46,6 +49,7 @@ export default function Home() {
             <ThirdSection />
             <ForthSection />
             <FifthSection />
+            <SeventhSection />
             <SixthSection />
           </div>
         </main>

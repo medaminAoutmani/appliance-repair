@@ -55,16 +55,15 @@ export const BentoGridItem = ({
       animate={control}
       transition={{ duration: 0.7, delay: (index === 3 || index === 4 || index === 5) ? 1 : (index === 6 || index === 7 || index === 8) ? 1.7 : 0 }}
     >
-      <div className="flex w-full h-fit rounded-xl ">
+      <div className="relative flex-1 lg:flex-initial w-full h-full rounded-xl">
         <Image
           src={header}
           alt={altText}
-          width="500"
-          height="500"
-          className="rounded-lg object-cover object-top h-20 w-full md:h-40 md:w-full  flex-shrink-0"
+          fill
+          className="rounded-lg object-cover object-top h-20 w-full md:h-40 lg:h-full md:w-full  flex-shrink-0"
         />
       </div>
-      <div className="group-hover/bento:translate-x-2 h-full transition  duration-200 text-lg flex items-start justify-center flex-col">
+      <div className="group-hover/bento:translate-x-2 lg:h-full transition  duration-200 text-lg flex items-start justify-center flex-col">
         <div className="font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2">
           {title}
         </div>

@@ -1,0 +1,233 @@
+{
+  "header": {
+    "phone": "(+212) 670687954",
+    "email": "tabridrraha@airepair.com",
+    "location": "Rabat MA"
+  },
+  "navbar": {
+    "home": "Accueil",
+    "aboutUs": "À propos",
+    "services": "Services",
+    "reviews": "Avis",
+    "contact": "Contact",
+    "orderNow": "Contactez-nous!",
+    "repair": "Réparation",
+    "airConditioningInstallation": "Installation de climatisation"
+  },
+  "hero": {
+    "trusted": "Des",
+    "experts": "Experts de",
+    "specialists": "Spécialistes de",
+    "professionals": "Professionnels de",
+    "forAllYour": "confiance pour tous vos réparation",
+    "repair": " ",
+    "needs": " ",
+    "description": "Nos techniciens qualifiés offrent des solutions fiables et rapides pour tous vos besoins de réparation.",
+    "description2": "Votre satisfaction est notre priorité.",
+    "mobileDescription": "Toutes les réparations effectuées en quelques heures—garanti !",
+    "orderNow": "Contactez-nous!"
+  },
+  "page": {
+    "repairingBrands": "Réparation de vos marques de confiance !"
+  },
+  "features": {
+    "title": "Découvrez nos fonctionnalités de qualité !",
+    "description": "Chez TABRID RRAHA, nous sommes fiers de fournir des services de réparation d'appareils de premier ordre. Nos fonctionnalités sont conçues pour assurer qualité et commodité, vous offrant des solutions rapides et fiables pour tous vos besoins en appareils.",
+    "mobileDescription": "TABRID RRAHA offre des réparations d'appareils de qualité supérieure—rapides, fiables et pratiques.",
+    "trackIssues": {
+      "title": "Suivre les problèmes efficacement",
+      "description": "Nous simplifions le suivi et la gestion de vos problèmes d'appareils avec nos derniers outils"
+    },
+    "skeletonOne": {
+      "title": "Des Experts en",
+      "titleHighlight": "Réparation d'Appareils",
+      "titleEnd": "fiables",
+      "description": "Nous offrons une gamme complète de services de réparation d'appareils par des professionnels certifiés, notamment réfrigérateurs, lave-linge et sèche-linge. Notre expertise s'étend aux lave-vaisselle et fours. Remplissez simplement notre formulaire pour commencer le processus. Profitez d'un service facile et pratique dès aujourd'hui !",
+      "quote": "Nous offrons des réparations d'appareils rapides et fiables avec des prix clairs et transparents. En tant qu'experts locaux, nous nous engageons à votre satisfaction !."
+    },
+    "skeletonThree": {
+      "titleHighlight": "Nous sommes là",
+      "titleEnd": "pour toutes les saisons",
+      "description": "Chez TABRID RRAHA, nous sommes fiers d'être votre partenaire fiable pour tous vos besoins de réparation d'appareils, quelle que soit la saison. Nos techniciens qualifiés sont disponibles toute l'année pour garantir le fonctionnement optimal de vos appareils.",
+      "button": "Contactez-nous!"
+    },
+    "skeletonFour": {
+      "description": "Choisissez des services professionnels de réparation d'appareils pour la tranquillité d'esprit et des solutions fiables. Vos appareils méritent le meilleur !",
+      "affordable": {
+        "title": "Abordable",
+        "description": "Réparations de qualité, prix imbattables."
+      },
+      "professional": {
+        "title": "Professionnel",
+        "description": "Précision dans chaque réparation, vos appareils méritent le meilleur !"
+      },
+      "highQuality": {
+        "title": "Haute Qualité",
+        "description": "Réparation d'appareils de haute qualité, garantie."
+      }
+    }
+  },
+  "secondSection": {
+    "title": "Fournir des solutions complètes de réparation d'appareils",
+    "description": "Nos services englobent une large gamme de machines adaptées à vos besoins."
+  },
+  "thirdSection": {
+    "successfulProject": "Projet réussi",
+    "happyClients": "Clients satisfaits",
+    "mainTitle": "Faites-nous confiance pour installer votre climatisation",
+    "description": "Choisissez-nous pour l'installation de climatisation et profitez d'une expérience sans tracas. Notre engagement envers votre confort garantit que votre système vous gardera au frais pendant des années !",
+    "professionalInstallation": {
+      "title": "Installation professionnelle",
+      "description": "Nos techniciens experts fournissent une expérience d'installation transparente sur laquelle vous pouvez compter pour la précision et la qualité."
+    },
+    "customerSatisfaction": {
+      "title": "Satisfaction client",
+      "description": "Nous donnons la priorité à votre satisfaction avec un engagement envers un service de qualité et un soutien continu."
+    },
+    "locations": "Apportant nos services à Rabat, Temara, Salé et Kenitra !"
+  },
+  "forthSection": {
+    "discover": "Découvrez",
+    "exclusiveFeatures": "des fonctionnalités exclusives,",
+    "unmatchedQuality": "une qualité inégalée !",
+    "projects": {
+      "airConditioning": {
+        "title": "Climatisation",
+        "description": "Le service de climatisation comprend l'entretien, la réparation et l'installation de systèmes de climatisation pour assurer des performances et un confort optimaux."
+      },
+      "acInstallation": {
+        "title": "Installation de climatisation",
+        "description": "L'installation de climatisation implique la mise en place d'unités de climatisation, en assurant un placement, une connectivité et un fonctionnement efficaces dans un espace."
+      },
+      "hvacMaintenance": {
+        "title": "Entretien CVC",
+        "description": "L'entretien CVC assure le fonctionnement efficace des systèmes de chauffage, de ventilation et de climatisation grâce à un entretien régulier."
+      },
+      "furnaceInstallation": {
+        "title": "Installation de fournaise",
+        "description": "L'installation de fournaise implique la mise en place d'un système de chauffage pour fournir de la chaleur dans des espaces résidentiels ou commerciaux."
+      },
+      "furnaceRepair": {
+        "title": "Réparation de fournaise",
+        "description": "La réparation de fournaise implique le diagnostic et la correction des problèmes pour restaurer la fonctionnalité et l'efficacité du système de chauffage."
+      },
+      "indoorAirQuality": {
+        "title": "Qualité de l'air intérieur",
+        "description": "Nous offrons des solutions sur mesure pour améliorer la qualité de l'air intérieur, garantissant des espaces de vie plus sains et plus confortables en réduisant les polluants et les allergènes."
+      }
+    }
+  },
+  "fifthSection": {
+    "title": "Notre processus de travail : un aperçu étape par étape",
+    "howWeWork": "Comment nous travaillons",
+    "scheduleAppointment": {
+      "title": "Planifiez votre rendez-vous",
+      "description": "Commencez votre parcours vers un service sans faille en réservant un rendez-vous personnalisé adapté à votre emploi du temps."
+    },
+    "getConfirmation": {
+      "title": "Obtenez une confirmation",
+      "description": "Nous vous contacterons pour confirmer et sécuriser votre créneau, garantissant que notre engagement envers vous est solide."
+    },
+    "weRepair": {
+      "title": "Nous réparons",
+      "description": "Détendez-vous pendant que nos techniciens qualifiés font leur magie, transformant vos préoccupations en solutions."
+    },
+    "qualityService": {
+      "title": "Service de qualité, prix abordables",
+      "description": "Nous offrons un service de qualité à des prix abordables. Notre équipe dévouée garantit des expériences client exceptionnelles avec un soutien fiable et compétent adapté à vos besoins. Avec des prix transparents et sans frais cachés, vous pouvez avoir confiance que vous obtenez une excellente valeur. Choisissez-nous pour un service de premier ordre qui correspond à votre budget !",
+      "point1": "Des réparations de qualité qui ne videront pas votre portefeuille.",
+      "point2": "Des solutions abordables pour tous.",
+      "point3": "Un service de premier ordre à des prix imbattables.",
+      "point4": "Construire des relations durables grâce à l'accessibilité."
+    }
+  },
+  "sixthSection": {
+    "title": "Aimé par les gens de toute notre région",
+    "description": "Rejoignez les nombreux clients satisfaits de notre région qui comptent sur nous pour une réparation d'appareils fiable. Avec des années d'expérience et d'expertise, nous abordons chaque travail avec soin et précision. Notre engagement envers un service de qualité garantit votre satisfaction à chaque fois !"
+  },
+  "contact": {
+    "tag": "Contactez un expert qualifié",
+    "heading": "Besoin d'une réparation d'appareil ?",
+    "description": "Remplissez notre formulaire pour obtenir un service rapide et professionnel en qui vous pouvez avoir confiance.",
+    "contactUs": "Contactez-nous !",
+    "name": "Nom",
+    "email": "Adresse e-mail",
+    "phone": "Téléphone",
+    "chooseServices": "Choisir les services",
+    "message": "Message",
+    "submit": "Soumettre",
+    "enterName": "Entrez votre nom",
+    "enterEmail": "Entrez votre e-mail",
+    "enterPhone": "Entrez votre numéro de téléphone",
+    "enterMessage": "Entrez votre message",
+    "selectService": "Sélectionner un service",
+    "location": {
+      "title": "Trouvez-nous",
+      "subtitle": "Visitez notre magasin",
+      "address": "Rabat, Maroc",
+      "description": "Nous sommes situés au cœur de Rabat, prêts à vous servir avec des services professionnels de réparation d'appareils."
+    },
+    "whatsapp": {
+      "title": "Besoin d'une réponse rapide ?",
+      "description": "Discutez avec nous sur WhatsApp pour une assistance instantanée",
+      "button": "Discuter sur WhatsApp",
+      "subtitle": "Obtenez de l'aide instantanée"
+    }
+  },
+  "services": {
+    "refrigeratorRepair": "Réparation de réfrigérateur",
+    "washerRepair": "Réparation de lave-linge",
+    "airConditionerRepair": "Réparation de climatiseur",
+    "freezerRepair": "Réparation de congélateur",
+    "dishwasherRepair": "Réparation de lave-vaisselle",
+    "dryerRepair": "Réparation de sèche-linge",
+    "ovenRepair": "Réparation de four",
+    "stoveRangeRepair": "Réparation de cuisinière et de table de cuisson",
+    "microwaveRepair": "Réparation de micro-ondes"
+  },
+  "bentoGrid": {
+    "refrigeratorRepair": {
+      "title": "Réparation de réfrigérateur",
+      "description": "La réparation de réfrigérateur assure un refroidissement et une fonctionnalité efficaces, préservant vos aliments et prolongeant la durée de vie de l'appareil."
+    },
+    "stoveRangeRepair": {
+      "title": "Réparation de cuisinière et de table de cuisson",
+      "description": "La réparation de cuisinière et de table de cuisson implique le diagnostic et la correction des problèmes des appareils de cuisson, garantissant leur fonctionnement sûr et efficace."
+    },
+    "ovenRepair": {
+      "title": "Réparation de four",
+      "description": "La réparation de four consiste à diagnostiquer et à corriger les problèmes des appareils de cuisson pour restaurer leur fonctionnalité et assurer une cuisson uniforme."
+    },
+    "dishwasherRepair": {
+      "title": "Réparation de lave-vaisselle",
+      "description": "La réparation de lave-vaisselle implique le dépannage et la correction des problèmes pour restaurer les fonctions de nettoyage et de drainage des appareils de lavage de vaisselle."
+    },
+    "washerRepair": {
+      "title": "Réparation de lave-linge",
+      "description": "La réparation de lave-linge comprend le diagnostic et la correction des problèmes pour restaurer les fonctions de lavage et d'essorage efficaces des machines à laver."
+    },
+    "dryerRepair": {
+      "title": "Réparation de sèche-linge",
+      "description": "La réparation de sèche-linge implique le diagnostic et la correction des problèmes pour assurer un séchage efficace et un fonctionnement approprié des appareils de séchage de vêtements."
+    },
+    "microwaveRepair": {
+      "title": "Réparation de micro-ondes",
+      "description": "La réparation de micro-ondes consiste à diagnostiquer et à corriger les problèmes pour restaurer les fonctions de chauffage et de cuisson appropriées des appareils à micro-ondes."
+    },
+    "freezerRepair": {
+      "title": "Réparation de congélateur",
+      "description": "La réparation de congélateur implique le diagnostic et la correction des problèmes pour assurer un refroidissement optimal et la préservation des aliments congelés dans les appareils de congélation."
+    },
+    "airConditionerRepair": {
+      "title": "Réparation de climatiseur",
+      "description": "La réparation de climatiseur comprend le diagnostic et la correction des problèmes pour restaurer un refroidissement efficace et le contrôle du climat dans les unités de climatisation."
+    }
+  },
+  "formCard": {
+    "emailPlaceholder": "E-mail",
+    "phonePlaceholder": "Téléphone",
+    "namePlaceholder": "Nom",
+    "button": "Planifier votre session d'installation"
+  }
+}
+

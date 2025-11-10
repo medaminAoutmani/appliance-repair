@@ -1,7 +1,10 @@
+"use client";
 import { AnimatedTestimonials } from '@/components/ui/animated-testimonials'
 import React from 'react'
+import { useLanguage } from '@/contexts/LanguageContext';
 
 function SixthSection() {
+  const { t } = useLanguage();
   const testimonials = [
     {
       quote:
@@ -40,19 +43,14 @@ function SixthSection() {
     },
   ];
   return (
-    <section className='w-full h-full flex flex-col items-center justify-center pb-10 lg:py-40 bg-dotted-spacing-[9px]'>
-      <div className='relative h-full lg:w-[90%] xl:w-[79%] flex flex-col items-center justify-center '>
-        <h4 className="text-5xl font-lato text-nowrap font-extrabold text-[#1c1f48] lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight  ">
-          Loved by people all over our region
+    <section id='reviews' className='w-full h-full flex flex-col items-center justify-center pb-10 px-2 sm:px-0 py-28 sm:py-36 lg:py-40 bg-dotted-spacing-[9px]'>
+      <div className='relative h-full sm:w-[90%] md:w-full lg:w-[90%] xl:w-[79%] flex flex-col items-center justify-center '>
+        <h4 className="text-4xl sm:text-5xl font-lato text-wrap font-extrabold text-[#1c1f48] lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight  ">
+          {t('sixthSection.title')}
         </h4>
 
-        <p className="text-sm lg:text-base  max-w-4xl  my-4 mx-auto text-neutral-500 text-center font-normal dark:text-neutral-300">
-          Join the many satisfied customers in our region
-          who rely on us for dependable appliance repair.
-          With years of experience and expertise,
-          we tackle every job with care and precision.
-          Our commitment to quality service
-          ensures your satisfaction every time!
+        <p className="text-xs sm:text-sm lg:text-base  max-w-4xl px-4 sm:px-6 md:px-0  my-4 mx-auto text-neutral-500 text-center font-normal dark:text-neutral-300">
+          {t('sixthSection.description')}
         </p>
         <AnimatedTestimonials testimonials={testimonials} />
       </div>

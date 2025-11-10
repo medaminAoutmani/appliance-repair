@@ -3,6 +3,8 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { MotionDiv, MotionP } from "@/lib/framer-motion";
+import { cn } from "@/lib/utils";
+import styles from "./navbar-menu.module.css";
 
 const transition = {
   type: "spring",
@@ -60,29 +62,36 @@ export const MenuItem = ({
   );
 };
 
-export const Menu = ({
-  setActive,
-  children,
-  isAtTop,
-}: {
+type MenuProps = {
   setActive: (item: string | null) => void;
   children: React.ReactNode;
   isAtTop: boolean;
-}) => {
-  return (
-    <nav
-      onMouseLeave={() => setActive(null)} // resets the state
-      className={`relative h-14 w-full rounded-full dark:bg-black dark:border-white/[0.2] bg-transparent backdrop-blur-md  shadow-input flex items-center justify-between space-x-4 px-4 lg:px-8 py-4 transition-all duration-700 `}
-      style={{
-        boxShadow: isAtTop ?
-          'rgba(34, 42, 53, 0.06) 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px, rgba(34, 42, 53, 0.04) 0px 0px 0px 0px, rgba(34, 42, 53, 0.08) 0px 0px 0px, rgba(47, 48, 55, 0.05) 0px 0px 0px, rgba(255, 255, 255, 0.1) 0px 0px 0px inset'
-          : 'rgba(34, 42, 53, 0.06) 0px 0px 24px, rgba(0, 0, 0, 0.05) 0px 1px 1px, rgba(34, 42, 53, 0.04) 0px 0px 0px 1px, rgba(34, 42, 53, 0.08) 0px 0px 4px, rgba(47, 48, 55, 0.05) 0px 16px 68px, rgba(255, 255, 255, 0.1) 0px 1px 0px inset'
-      }}
-    >
-      {children}
-    </nav>
-  );
+  isExpanded?: boolean;
+  className?: string;
 };
+
+export const Menu = React.forwardRef<HTMLDivElement, MenuProps>(
+  ({ setActive, children, isAtTop, isExpanded = false, className }, ref) => {
+    return (
+      <nav
+        ref={ref}
+        onMouseLeave={() => setActive(null)}
+        className={cn(
+          "relative w-full ease-in-out duration-700",
+          "transition-[background-color,height,transform,box-shadow]",
+          !isExpanded && "h-14 flex items-center justify-between space-x-4 px-4 lg:px-8 py-4 rounded-full dark:bg-black bg-transparent backdrop-blur-md",
+          isExpanded && "flex flex-col items-start justify-start space-y-4 px-4 py-5 rounded-2xl bg-white",
+          isAtTop ? styles.menuAtTopShadow : styles.menuScrolledShadow,
+          className
+        )}
+      >
+        {children}
+      </nav>
+    );
+  }
+);
+
+Menu.displayName = "Menu";
 
 export const ProductItem = ({
   title,
