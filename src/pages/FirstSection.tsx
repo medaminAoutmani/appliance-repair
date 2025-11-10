@@ -4,7 +4,7 @@ import { Roboto } from 'next/font/google';
 import Divider from '@mui/material/Divider';
 import { Skeleton } from '@/components/ui/Card';
 import { cn } from '@/lib/utils';
-import { FeaturesSectionDemo } from '@/components/ui/Features';
+import FeaturesSectionDemo from '@/components/ui/Features';
 
 
 

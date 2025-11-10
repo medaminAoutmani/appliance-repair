@@ -21,7 +21,7 @@ const roboto = Roboto({
   subsets: ['latin'],
 });
 
-export function FeaturesSectionDemo() {
+function FeaturesSectionDemo() {
   const { t, language } = useLanguage();
 
   let reftitle = useRef(null);
@@ -173,7 +173,7 @@ const FeatureDescription = ({ children, controls }: { children?: React.ReactNode
   );
 };
 
-export const SkeletonOne = ({ controls }: { controls: AnimationControls }) => {
+const SkeletonOne = ({ controls }: { controls: AnimationControls }) => {
   const { t, language } = useLanguage();
 
   return (
@@ -218,7 +218,7 @@ export const SkeletonOne = ({ controls }: { controls: AnimationControls }) => {
   );
 };
 
-export const SkeletonThree = () => {
+const SkeletonThree = () => {
   const { t } = useLanguage();
 
   let ref = useRef(null);
@@ -277,7 +277,7 @@ export const SkeletonThree = () => {
   );
 };
 
-export const SkeletonTwo = ({ controls }: { controls: AnimationControls }) => {
+const SkeletonTwo = ({ controls }: { controls: AnimationControls }) => {
   const images1 = [
     "/appliance3.jpg",
     "/appliance2.jpg",
@@ -366,8 +366,7 @@ export const SkeletonTwo = ({ controls }: { controls: AnimationControls }) => {
   );
 };
 
-
-export const SkeletonFour = () => {
+const SkeletonFour = () => {
   const { t, language } = useLanguage();
 
   let ref = useRef(null);
