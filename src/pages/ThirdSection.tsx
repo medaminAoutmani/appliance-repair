@@ -1,8 +1,7 @@
 "use client";
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Counter from '@/components/ui/text/counter'
-import AddIcon from '@mui/icons-material/Add';
 import { FaPlus } from "react-icons/fa";
 import FormCard from '@/components/ui/formCard';
 import { Roboto } from 'next/font/google';
@@ -22,10 +21,6 @@ function ThirdSection() {
   const [isHoveredLike, setIsHoveredLike] = useState(false);
   const [isHoveredClients, setIsHoveredClients] = useState(false);
   const [isHoveredSuccess, setIsHoveredSuccess] = useState(false);
-
-  useEffect(() => {
-
-  });
 
   return (
     <section id="air-conditioning" className="relative w-full h-full bg-gradient-to-t from-[#08ac86] via-[#1c7872] to-[#3b3e61] flex flex-col items-center justify-center mt-20 sm:mt-40 md:mt-0 py-12 md:py-0" >
