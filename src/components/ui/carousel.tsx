@@ -72,6 +72,31 @@ const Carousel = React.forwardRef<
       api?.scrollNext();
     }, [api]);
 
+    const scrollPrev = React.useCallback(() => {
+      api?.scrollPrev();
+    }, [api]);
+
+    const [canScrollPrev, setCanScrollPrev] = React.useState(false);
+    const [canScrollNext, setCanScrollNext] = React.useState(false);
+
+    React.useEffect(() => {
+      if (!api) return;
+
+      const onSelect = () => {
+        setCanScrollPrev(api.canScrollPrev());
+        setCanScrollNext(api.canScrollNext());
+      };
+
+      onSelect();
+      api.on("select", onSelect);
+      api.on("reInit", onSelect);
+
+      return () => {
+        api.off("select", onSelect);
+        api.off("reInit", onSelect);
+      };
+    }, [api]);
+
     // Automatic scrolling effect
     React.useEffect(() => {
       const interval = setInterval(() => {
@@ -89,7 +114,10 @@ const Carousel = React.forwardRef<
           opts,
           orientation:
             orientation || (opts?.axis === "y" ? "vertical" : "horizontal"),
+          scrollPrev,
           scrollNext,
+          canScrollPrev,
+          canScrollNext,
         }}
       >
         <div
