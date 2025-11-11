@@ -46,14 +46,18 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     if (!currentTranslations) {
       return key;
     }
-    let value: any = currentTranslations;
+    let value: string | Record<string, unknown> = currentTranslations;
     for (const k of keys) {
-      value = value?.[k];
+      if (typeof value === 'object' && value !== null && k in value) {
+        value = value[k] as string | Record<string, unknown>;
+      } else {
+        return key;
+      }
       if (value === undefined) {
         return key;
       }
     }
-    return value || key;
+    return (typeof value === 'string' ? value : key) || key;
   }, [language]);
 
   const value = useMemo(() => ({

@@ -3,9 +3,6 @@ import React from 'react'
 import CallIcon from '@mui/icons-material/Call';
 import DraftsIcon from '@mui/icons-material/Drafts';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import { BsTwitterX } from "react-icons/bs";
-import { FaFacebook } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
 import { NavbarDemo } from './Navbar';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -14,7 +11,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 
 
 function Header() {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
 
   return (
     <div className='w-full h-fit flex flex-col items-center justify-start'> {/**h-36 */}

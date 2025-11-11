@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import Hero from "@/pages/Hero";
 import Header from "../components/Header";
 import Preloader from "../components/Preloader";
-import { Suspense } from 'react'
 import { CarouselDemo } from "@/components/PartnerBar";
 import FirstSection from "@/pages/FirstSection";
 import SecondeSection from "@/pages/SecondeSection";

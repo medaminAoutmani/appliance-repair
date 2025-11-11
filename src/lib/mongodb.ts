@@ -14,11 +14,6 @@ if (MONGODB_URI.includes('<db_password>')) {
   throw new Error('MONGODB_URI contains placeholder. Please update .env.local with your actual password.');
 }
 
-// Helper function to encode password for MongoDB URI
-function encodeMongoPassword(password: string): string {
-  return encodeURIComponent(password);
-}
-
 // TypeScript now knows MONGODB_URI is a string after the check above
 const connectionString: string = MONGODB_URI;
 
@@ -32,7 +27,7 @@ declare global {
   var mongoose: MongooseCache | undefined;
 }
 
-let cached: MongooseCache = global.mongoose || { conn: null, promise: null };
+const cached: MongooseCache = global.mongoose || { conn: null, promise: null };
 
 if (!global.mongoose) {
   global.mongoose = cached;
