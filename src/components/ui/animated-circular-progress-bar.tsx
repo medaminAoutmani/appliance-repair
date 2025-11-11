@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import WordRotate from "./text/word-rotate";
+// import WordRotate from "./text/word-rotate";
 
 interface Props {
   max: number;
@@ -114,7 +114,11 @@ export default function AnimatedCircularProgressBar({
         </svg>
         <span
           data-current-value={currentPercent}
-          className="duration-[var(--transition-length)] delay-[var(--delay)]  absolute inset-0 m-auto ml-8 mt-9  size-fit ease-linear animate-in fade-in"
+          className="absolute inset-0 m-auto ml-8 mt-9 size-fit ease-linear animate-in fade-in"
+          style={{
+            transitionDuration: "var(--transition-length)",
+            transitionDelay: "var(--delay)",
+          }}
         >
           {delay && <Image className="" src="/loader.svg" alt="My SVG Animation" width={120} height={120} />}
 
@@ -123,7 +127,7 @@ export default function AnimatedCircularProgressBar({
           {percentage}%
         </div>
         <div className="text-nowrap absolute text-sm left-[-15px] ">
-          Don't Replace, Repair and Save!
+          Don&apos;t Replace, Repair and Save!
         </div>
       </div>
 
