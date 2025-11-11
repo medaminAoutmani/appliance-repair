@@ -3,7 +3,7 @@ import { AnimationControls, motion, useAnimation, useInView } from 'framer-motio
 import React, { useEffect, useRef } from 'react'
 
 function TextGeneration({ paragraph, className, controls }: { paragraph: string, className?: string, controls: AnimationControls }) {
-  let ref = useRef(null);
+  const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   const mainControls = useAnimation();
@@ -16,7 +16,7 @@ function TextGeneration({ paragraph, className, controls }: { paragraph: string,
         y: 0,
       })
     }
-  }, [isInView])
+  }, [isInView, mainControls])
 
   return (
     <motion.p

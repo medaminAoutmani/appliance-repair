@@ -125,7 +125,7 @@ export const ProductItem = ({
   );
 };
 
-export const HoveredLink = ({ children, ...rest }: any) => {
+export const HoveredLink = ({ children, ...rest }: React.ComponentProps<typeof Link> & { children: React.ReactNode }) => {
   return (
     <Link
       {...rest}
