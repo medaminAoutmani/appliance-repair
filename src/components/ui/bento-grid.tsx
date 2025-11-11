@@ -32,7 +32,6 @@ export const BentoGridItem = ({
   title,
   description,
   header,
-  icon,
 }: {
   index: number;
   control: AnimationControls;

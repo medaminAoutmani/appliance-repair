@@ -11,6 +11,44 @@ interface FormData {
   source: 'seventhSection' | 'formCard';
 }
 
+interface WhatsAppErrorResponse {
+  error?: {
+    message?: string;
+    error_user_msg?: string;
+    code?: number;
+    error_subcode?: number;
+    type?: string;
+  };
+}
+
+interface WhatsAppSuccessResponse {
+  messages?: Array<{
+    id?: string;
+  }>;
+}
+
+interface WhatsAppTemplateParameter {
+  type: 'text';
+  text: string;
+}
+
+interface WhatsAppRequestBody {
+  messaging_product: 'whatsapp';
+  recipient_type: 'individual';
+  to: string;
+  type: 'template';
+  template: {
+    name: string;
+    language: {
+      code: string;
+    };
+    components?: Array<{
+      type: 'body';
+      parameters: WhatsAppTemplateParameter[];
+    }>;
+  };
+}
+
 // WhatsApp API configuration
 // You'll need to set these in your .env.local file
 const WHATSAPP_API_VERSION = 'v22.0'; // WhatsApp Business API version
@@ -67,12 +105,11 @@ async function sendWhatsAppMessage(formData: FormData): Promise<{ success: boole
     const serviceInfo = formData.service || 'Not specified';
     const emailInfo = formData.email || 'Not provided';
     const messageInfo = formData.message || 'No additional message';
-    const formSource = formData.source === 'seventhSection' ? 'Contact Form' : 'Quick Form';
     const timestamp = new Date().toLocaleString();
 
     // Create template body parameters
     // Adjust the number of parameters based on your template structure
-    const availableParameters = [
+    const availableParameters: WhatsAppTemplateParameter[] = [
       { type: 'text', text: formData.name },           // Parameter 1: Customer Name
       { type: 'text', text: formData.phone },          // Parameter 2: Phone Number
       { type: 'text', text: emailInfo },               // Parameter 3: Email
@@ -88,7 +125,7 @@ async function sendWhatsAppMessage(formData: FormData): Promise<{ success: boole
     const templateParameters = availableParameters.slice(0, desiredParameterCount);
 
     // Build template message request body
-    const requestBody: Record<string, any> = {
+    const requestBody: WhatsAppRequestBody = {
       messaging_product: 'whatsapp',
       recipient_type: 'individual',
       to: recipientNumber,
@@ -98,17 +135,16 @@ async function sendWhatsAppMessage(formData: FormData): Promise<{ success: boole
         language: {
           code: WHATSAPP_TEMPLATE_LANGUAGE,
         },
+        ...(templateParameters.length > 0 && {
+          components: [
+            {
+              type: 'body',
+              parameters: templateParameters,
+            },
+          ],
+        }),
       },
     };
-
-    if (templateParameters.length > 0) {
-      requestBody.template.components = [
-        {
-          type: 'body',
-          parameters: templateParameters,
-        },
-      ];
-    }
 
     console.log('📤 Sending WhatsApp template message:', {
       url: apiUrl,
@@ -129,11 +165,11 @@ async function sendWhatsAppMessage(formData: FormData): Promise<{ success: boole
     });
 
     const responseText = await response.text();
-    let errorData: any = {};
+    let errorData: WhatsAppErrorResponse = {};
 
     try {
-      errorData = JSON.parse(responseText);
-    } catch (e) {
+      errorData = JSON.parse(responseText) as WhatsAppErrorResponse;
+    } catch {
       console.warn('Could not parse error response as JSON:', responseText);
     }
 
@@ -159,10 +195,10 @@ async function sendWhatsAppMessage(formData: FormData): Promise<{ success: boole
       };
     }
 
-    let data: any = {};
+    let data: WhatsAppSuccessResponse = {};
     try {
-      data = JSON.parse(responseText);
-    } catch (e) {
+      data = JSON.parse(responseText) as WhatsAppSuccessResponse;
+    } catch {
       console.error('❌ Could not parse success response as JSON:', responseText);
       return { success: false, error: 'Invalid response from WhatsApp API' };
     }

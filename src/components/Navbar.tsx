@@ -1,9 +1,8 @@
 "use client";
 import React, { useState, useEffect, useCallback, useRef } from "react";
-import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
+import { HoveredLink, Menu, MenuItem } from "./ui/navbar-menu";
 import { HiOutlineMenu } from "react-icons/hi";
 import {
-  motion,
   AnimatePresence,
   useScroll,
   useMotionValueEvent,
@@ -13,7 +12,6 @@ import { MotionDiv, MotionP } from "@/lib/framer-motion";
 import Image from 'next/image';
 import logo from "../../public/logo-horizontal.png"
 import MagicButton from "./ui/MagicButton";
-import { Button } from "./ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export function NavbarDemo() {
@@ -25,7 +23,7 @@ export function NavbarDemo() {
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
     if (typeof current === "number") {
-      let direction = current! - scrollYProgress.getPrevious()!;
+      const direction = current! - scrollYProgress.getPrevious()!;
 
       if (scrollYProgress.get() < 0.05) {
         // also set true for the initial state
@@ -67,7 +65,7 @@ function Navbar({ className, isAtTop, visible }: { className?: string; isAtTop: 
   const [active, setActive] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navRef = useRef<HTMLDivElement | null>(null);
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
 
   const scrollToSection = useCallback((id: string) => {
     if (typeof window === "undefined") return;

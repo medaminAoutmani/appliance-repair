@@ -2,12 +2,9 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import createGlobe from "cobe";
 import { useEffect, useRef } from "react";
-import { AnimationControls, motion, useAnimate, useAnimation, useInView } from "framer-motion";
-import { IconBrandYoutubeFilled } from "@tabler/icons-react";
+import { AnimationControls, motion, useAnimation, useInView } from "framer-motion";
 import { BorderBeam } from "@/components/ui/border-beam";
-import Link from "next/link";
 import { Roboto } from "next/font/google";
 import StyledButton from "./button-1";
 import { MotionDiv, MotionH2, MotionP } from "@/lib/framer-motion";
@@ -22,10 +19,10 @@ const roboto = Roboto({
 });
 
 function FeaturesSectionDemo() {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
 
-  let reftitle = useRef(null);
-  let refContent = useRef(null);
+  const reftitle = useRef(null);
+  const refContent = useRef(null);
   const isInViewTitle = useInView(reftitle, { once: true });
   const isInViewContent = useInView(refContent, { once: true });
 
@@ -43,7 +40,7 @@ function FeaturesSectionDemo() {
         opacity: 1, y: 0
       })
     }
-  }, [isInViewTitle, isInViewContent])
+  }, [isInViewTitle, isInViewContent, TitleControl, ContentControl])
 
   const features = [
     {
@@ -202,7 +199,7 @@ const SkeletonOne = ({ controls }: { controls: AnimationControls }) => {
               <Image className='rounded-full drop-shadow-lg lg:w-16 xl:w-20 ' src="/repair-man.jpg" alt='repair-man' width={400} height={400} />
             </div>
             <div className={`lg:w-80 xl:w-96 flex items-center justify-center pl-5 lg:pl-12 text-[#04cf9c] text-base ${roboto.className} italic-text`}>
-              "{t('features.skeletonOne.quote')}" 😊
+              &quot;{t('features.skeletonOne.quote')}&quot; 😊
             </div>
             <div>
               <Image className='absolute right-12 sm:right-0 top-[600px] sm:top-[290px]' src="/quote-left.png" alt='quote-left' width={20} height={20} />
@@ -221,7 +218,7 @@ const SkeletonOne = ({ controls }: { controls: AnimationControls }) => {
 const SkeletonThree = () => {
   const { t } = useLanguage();
 
-  let ref = useRef(null);
+  const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   const Control = useAnimation();
@@ -232,7 +229,7 @@ const SkeletonThree = () => {
         opacity: 1, y: 0
       })
     }
-  }, [isInView])
+  }, [isInView, Control])
 
   const scrollToContact = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
@@ -369,7 +366,7 @@ const SkeletonTwo = ({ controls }: { controls: AnimationControls }) => {
 const SkeletonFour = () => {
   const { t, language } = useLanguage();
 
-  let ref = useRef(null);
+  const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   const Control = useAnimation();
@@ -380,7 +377,7 @@ const SkeletonFour = () => {
         opacity: 1, y: 0
       })
     }
-  }, [isInView])
+  }, [isInView, Control])
   const first = {
     initial: {
       x: 20,

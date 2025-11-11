@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import AnimatedCircularProgressBar from "@/components/ui/animated-circular-progress-bar";
 
 export default function Preloader() {

@@ -1,5 +1,4 @@
 "use client";
-import { cn } from "@/lib/utils";
 import React, { useEffect, useRef } from "react";
 import { BentoGrid, BentoGridItem } from "./bento-grid";
 import {
@@ -17,7 +16,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 export function BentoGridDemo() {
   const { t } = useLanguage();
 
-  let refContent = useRef<HTMLDivElement>(null);
+  const refContent = useRef<HTMLDivElement>(null);
   const isInViewContent = useInView(refContent, { once: true });
 
   const ContentControl = useAnimation();
@@ -28,7 +27,7 @@ export function BentoGridDemo() {
         opacity: 1, y: 0
       })
     }
-  }, [isInViewContent])
+  }, [isInViewContent, ContentControl])
 
   const items = [
     {
