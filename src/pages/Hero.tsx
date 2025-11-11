@@ -46,7 +46,7 @@ function Hero() {
           <div className='relative w-[90%] sm:w-[95%] md:w-[80%] h-fit lg:h-full flex flex-col items-center lg:items-start justify-center lg:justify-start pt-[70px] xl:pt-[100px] gap-5 text-left text-6xl xl:text-[72px] text-[#1c1f48] leading-[72px]  font-bold  font-lato'>
             <BoxReveal boxColor={"#04cf9c"} duration={0.7} delay={0.5}>
               <div className={`relative text-wrap items-center lg:items-start justify-center flex flex-col`}>
-                <div className={`relative flex flex-row items-center justify-start ${language == 'en' ? 'w-[400px] sm:w-[575px] xl:w-[690px]' : 'w-[380px] sm:w-[590px] lg:w-[680px]'}`}>
+                <div className={`relative flex flex-row items-center justify-start ${language == 'en' ? 'w-full sm:w-[575px] xl:w-[690px]' : 'w-[380px] sm:w-[590px] lg:w-[680px]'}`}>
                   <span className='left-0 text-4xl sm:text-6xl lg:text-6xl xl:text-7xl'>{t('hero.trusted')} </span>
                   <WordRotate
                     className={` ml-3 bg-gradient-to-t from-[#08ac86] via-[#1c7872] to-[#3b3e61] bg-clip-text text-transparent dark:text-white ${language == 'en' ? 'text-4xl sm:text-6xl py-1' : 'text-4xl sm:text-6xl lg:text-[66px] lg:leading-[1] py-0'}`}
