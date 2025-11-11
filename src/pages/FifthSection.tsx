@@ -4,6 +4,7 @@ import Image from 'next/image'
 import GithubCardSkew from '@/components/ui/GithubCardSkew'
 import { motion } from 'framer-motion'
 import { useLanguage } from '@/contexts/LanguageContext';
+import { LanguageProviderWrapper } from '@/components/providers/LanguageProviderWrapper';
 
 function FifthSection() {
   const { t } = useLanguage();
@@ -199,4 +200,10 @@ function FifthSection() {
   )
 }
 
-export default FifthSection
+export default function FifthSectionPage() {
+  return (
+    <LanguageProviderWrapper>
+      <FifthSection />
+    </LanguageProviderWrapper>
+  );
+}
