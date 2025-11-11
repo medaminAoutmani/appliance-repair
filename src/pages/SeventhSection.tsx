@@ -166,7 +166,7 @@ function SeventhSection() {
               {/* Map Container */}
               <div className="w-full h-48 sm:h-56 md:h-64 lg:h-72 rounded-lg overflow-hidden border-2 border-[#04cf9c]/30 shadow-lg">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d282.08058331702165!2d-6.814247968060602!3d33.98274017901599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzPCsDU4JzU4LjEiTiA2wrA0OCc1MC44Ilc!5e0!3m2!1sen!2sma!4v1762623001479!5m2!1sen!2sma"
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3222.223208587301!2d-6.816674924286512!3d33.98279997318335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzPCsDU4JzU4LjEiTiA2wrA0OCc1MC44Ilc!5e1!3m2!1sen!2sma!4v1762859874019!5m2!1sen!2sma"
                   width="100%"
                   height="100%"
                   allowFullScreen

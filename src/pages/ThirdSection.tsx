@@ -132,7 +132,7 @@ function ThirdSection() {
                   />
                 </div>
                 <div className='relative w-[calc(100%-84px)] md:w-[calc(100%-100px)] flex flex-col items-start justify-center gap-1'>
-                  <div className='relative w-fit h-9 leading-9 font-lato text-left text-xl sm:text-2xl md:text-xl lg:text-2xl text-white font-extrabold'>
+                  <div className='relative w-fit  font-lato text-left text-xl sm:text-2xl md:text-xl lg:text-2xl text-white font-extrabold'>
                     {t('thirdSection.professionalInstallation.title')}
                   </div>
                   <div className={`relative ${roboto.className} f text-left text-sm text-[#e8e8e8] font-thin leading-5 `}>
@@ -155,7 +155,7 @@ function ThirdSection() {
                   />
                 </div>
                 <div className='relative w-[calc(100%-84px)] md:w-[calc(100%-100px)] flex flex-col items-start justify-center gap-1'>
-                  <div className='relative w-fit h-9 leading-9 font-lato text-left text-xl sm:text-2xl md:text-xl lg:text-2xl text-white font-extrabold'>
+                  <div className='relative w-fit font-lato text-left text-xl sm:text-2xl md:text-xl lg:text-2xl text-white font-extrabold'>
                     {t('thirdSection.customerSatisfaction.title')}
                   </div>
                   <div className={`relative ${roboto.className} f text-left text-sm text-[#e8e8e8] font-thin leading-5 `}>
