@@ -37,8 +37,29 @@ const WHATSAPP_API_VERSION = process.env.WHATSAPP_API_VERSION || 'v22.0';
 const WHATSAPP_TOKEN = process.env.WHATSAPP_TOKEN || '';
 const WHATSAPP_PHONE_ID = process.env.WHATSAPP_PHONE_ID || '';
 const ADMIN_WHATSAPP_NUMBER = process.env.ADMIN_WHATSAPP_NUMBER || '';
-const WHATSAPP_TEMPLATE_NAME = process.env.WHATSAPP_TEMPLATE_NAME || 'hello_world'; // CHANGED
-const WHATSAPP_TEMPLATE_LANGUAGE = process.env.WHATSAPP_TEMPLATE_LANGUAGE || 'en_US'; // CHANGED to en_US
+const WHATSAPP_TEMPLATE_NAME = process.env.WHATSAPP_TEMPLATE_NAME || 'hello_world';
+const WHATSAPP_TEMPLATE_LANGUAGE = process.env.WHATSAPP_TEMPLATE_LANGUAGE || 'en_US';
+
+// Simple in-memory rate limiting (use Redis in production)
+const requestCounts = new Map<string, { count: number; lastReset: number }>();
+
+function rateLimit(ip: string, limit = 5, windowMs = 60000): boolean {
+  const now = Date.now();
+  const windowStart = now - windowMs;
+
+  if (!requestCounts.has(ip) || requestCounts.get(ip)!.lastReset < windowStart) {
+    requestCounts.set(ip, { count: 1, lastReset: now });
+    return true;
+  }
+
+  const ipData = requestCounts.get(ip)!;
+  if (ipData.count >= limit) {
+    return false;
+  }
+
+  ipData.count++;
+  return true;
+}
 
 async function sendWhatsAppMessage(formData: FormData): Promise<{ success: boolean; messageId?: string; error?: string }> {
   try {
@@ -96,7 +117,7 @@ async function sendWhatsAppMessage(formData: FormData): Promise<{ success: boole
       template: WHATSAPP_TEMPLATE_NAME,
       language: WHATSAPP_TEMPLATE_LANGUAGE,
       parameterCount: templateParameters.length,
-      parameterContent: templateParameters[0].text.substring(0, 100) + '...' // Preview first 100 chars
+      parameterContent: templateParameters[0].text.substring(0, 100) + '...'
     });
 
     const response = await fetch(apiUrl, {
@@ -193,12 +214,60 @@ async function sendTextMessage(formData: FormData, recipientNumber: string): Pro
 
 export async function POST(request: NextRequest) {
   try {
+    // SECURITY: Log and analyze incoming requests
+    const clientIP = request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown';
+    const userAgent = request.headers.get('user-agent') || '';
+    const contentType = request.headers.get('content-type');
+
+    console.log('🔍 Incoming Request:', {
+      ip: clientIP,
+      userAgent: userAgent.substring(0, 100),
+      contentType: contentType,
+      timestamp: new Date().toISOString()
+    });
+
+    // SECURITY: Rate limiting - max 5 requests per minute per IP
+    if (!rateLimit(clientIP, 5, 60000)) {
+      console.log('🚫 Rate limit exceeded for IP:', clientIP);
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        { status: 429 }
+      );
+    }
+
+    // SECURITY: Validate content type
+    if (contentType !== 'application/json') {
+      console.log('🚫 Invalid content type:', contentType);
+      return NextResponse.json(
+        { error: 'Invalid content type' },
+        { status: 400 }
+      );
+    }
+
+    // SECURITY: Block obvious bots and empty user agents
+    if (!userAgent || userAgent.length < 10 || /bot|crawl|spider|scanner/i.test(userAgent)) {
+      console.log('🚫 Blocked bot request:', userAgent);
+      return NextResponse.json(
+        { error: 'Access denied' },
+        { status: 403 }
+      );
+    }
+
     const body: FormData = await request.json();
 
     // Validate required fields
     if (!body.name || !body.phone || !body.source) {
       return NextResponse.json(
         { error: 'Missing required fields: name, phone, and source are required' },
+        { status: 400 }
+      );
+    }
+
+    // SECURITY: Validate field lengths to prevent abuse
+    if (body.name.length > 100 || body.phone.length > 20 || (body.email && body.email.length > 100) ||
+      (body.service && body.service.length > 100) || (body.message && body.message.length > 500)) {
+      return NextResponse.json(
+        { error: 'Invalid field lengths' },
         { status: 400 }
       );
     }
@@ -289,21 +358,22 @@ export async function POST(request: NextRequest) {
   }
 }
 
-export async function GET(request: NextRequest) {
+// Fixed: Remove unused parameters by using underscore or omitting
+export async function GET() {
   return NextResponse.json(
     { error: 'Method not allowed' },
     { status: 405 }
   );
 }
 
-export async function PUT(request: NextRequest) {
+export async function PUT() {
   return NextResponse.json(
     { error: 'Method not allowed' },
     { status: 405 }
   );
 }
 
-export async function DELETE(request: NextRequest) {
+export async function DELETE() {
   return NextResponse.json(
     { error: 'Method not allowed' },
     { status: 405 }
