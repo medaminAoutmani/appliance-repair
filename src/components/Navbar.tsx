@@ -227,7 +227,7 @@ function Navbar({ className, isAtTop, visible }: { className?: string; isAtTop: 
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.25 }}
-                className="flex flex-col lg:hidden w-full pt-2 pb-1 space-y-3"
+                className="flex flex-col lg:hidden w-full pt-14 pb-1 space-y-3"
               >
                 <MotionP
                   transition={{ duration: 0.3 }}

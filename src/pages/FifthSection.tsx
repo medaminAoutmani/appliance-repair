@@ -24,7 +24,7 @@ function FifthSection() {
         </div>
         <div className='relative w-full flex flex-col md:flex-row items-center justify-center gap-6 md:gap-2 lg:gap-10 xl:gap-24'>
 
-          <GithubCardSkew className='relative w-[95%] sm:w-[70%] md:w-[48%] md:h-[420px] lg:w-[500px] lg:h-[488px] flex flex-col items-center justify-center bg-[rgba(255,255,255,0.2)] p-2 sm:p-8 md:p-2 lg:p-8 rounded-[30px] '>
+          <GithubCardSkew className='relative w-[95%] sm:w-[70%] md:w-[48%] h-full md:h-[420px] lg:w-[500px] lg:h-[488px] flex flex-col items-center justify-center bg-[rgba(255,255,255,0.2)] p-2 sm:p-8 md:p-2 lg:p-8 rounded-[30px] '>
             <div className='relative flex items-center justify-center font-lato text-2xl sm:text-xl md:text-2xl xl:text-3xl text-white font-extrabold'>
               {t('fifthSection.howWeWork')}
             </div>
@@ -113,8 +113,8 @@ function FifthSection() {
 
 
                 <div className='relative w-full flex-col flex items-center justify-center gap-4 mb-4'>
-                  <div className='relative h-24 w-full flex flex-col items-start justify-center lg:gap-0 xl:gap-1'>
-                    <div className='relative w-fit h-9 leading-9 font-lato text-left text-xl xl:text-2xl text-white font-extrabold'>
+                  <div className='relative h-auto sm:h-24 w-full flex flex-col items-start justify-center lg:gap-0 xl:gap-1'>
+                    <div className='relative w-fit font-lato text-left text-xl xl:text-2xl text-white font-extrabold'>
                       {t('fifthSection.scheduleAppointment.title')}
                     </div>
                     <div className={`relative font-roboto f text-left text-sm text-[#e8e8e8] font-thin leading-5 `}>
@@ -122,8 +122,8 @@ function FifthSection() {
                     </div>
                   </div>
 
-                  <div className='relative h-24 w-full flex flex-col items-start justify-center gap-0 xl:gap-1'>
-                    <div className='relative w-fit h-9 leading-9 font-lato text-xl xl:text-2xl text-white font-extrabold'>
+                  <div className='relative h-auto sm:h-24 w-full flex flex-col items-start justify-center gap-0 xl:gap-1'>
+                    <div className='relative w-fit font-lato text-xl xl:text-2xl text-white font-extrabold'>
                       {t('fifthSection.getConfirmation.title')}
                     </div>
                     <div className={`relative font-roboto f text-left text-sm text-[#e8e8e8] font-thin leading-5 `}>
@@ -131,8 +131,8 @@ function FifthSection() {
                     </div>
                   </div>
 
-                  <div className='relative h-24 w-full flex flex-col items-start justify-center gap-0 xl:gap-1'>
-                    <div className='relative w-fit h-9 leading-9 font-lato text-left text-xl xl:text-2xl text-white font-extrabold'>
+                  <div className='relative h-auto sm:h-24 w-full flex flex-col items-start justify-center gap-0 xl:gap-1'>
+                    <div className='relative w-fit font-lato text-left text-xl xl:text-2xl text-white font-extrabold'>
                       {t('fifthSection.weRepair.title')}
                     </div>
                     <div className={`relative font-roboto f text-left text-sm text-[#e8e8e8] font-thin leading-5 `}>
@@ -145,7 +145,7 @@ function FifthSection() {
               </div>
             </div>
           </GithubCardSkew>
-          <GithubCardSkew className='w-[95%] sm:w-[70%] md:w-[48%] md:h-[420px] lg:w-[500px] lg:h-[488px] flex flex-col items-center justify-center bg-[rgba(255,255,255,0.2)] p-2 sm:p-8 md:p-2 lg:p-8 rounded-[30px] '>
+          <GithubCardSkew className='w-[95%] h-full sm:w-[70%] md:w-[48%] md:h-[420px] lg:w-[500px] lg:h-[488px] flex flex-col items-center justify-center bg-[rgba(255,255,255,0.2)] p-2 sm:p-8 md:p-2 lg:p-8 rounded-[30px] '>
             <div className='relative flex items-center justify-center font-lato text-2xl xl:text-3xl text-white text-center font-extrabold px-8'>
               {t('fifthSection.qualityService.title')}
             </div>
