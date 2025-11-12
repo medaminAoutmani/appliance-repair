@@ -161,6 +161,9 @@
     "enterPhone": "Enter your phone number",
     "enterMessage": "Enter your message",
     "selectService": "Select a service",
+    "successMessage": "Your form has been submitted successfully! We will contact you soon.",
+    "errorMessage": "Failed to submit form. Please try again.",
+    "submitting": "Submitting your request...",
     "location": {
       "title": "Find Us",
       "subtitle": "Visit our shop",
@@ -227,7 +230,10 @@
     "emailPlaceholder": "Email",
     "phonePlaceholder": "Phone",
     "namePlaceholder": "Name",
-    "button": "Schedule Your Installation Session"
+    "button": "Schedule Your Installation Session",
+    "successMessage": "Your form has been submitted successfully! We will contact you soon.",
+    "errorMessage": "Failed to submit form. Please try again.",
+    "submitting": "Submitting your request..."
   }
 }
 

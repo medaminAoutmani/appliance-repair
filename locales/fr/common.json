@@ -161,6 +161,9 @@
     "enterPhone": "Entrez votre numéro de téléphone",
     "enterMessage": "Entrez votre message",
     "selectService": "Sélectionner un service",
+    "successMessage": "Votre formulaire a été envoyé avec succès ! Nous vous recontacterons prochainement.",
+    "errorMessage": "L'envoi du formulaire a échoué. Veuillez réessayer.",
+    "submitting": "Envoi du formulaire en cours...",
     "location": {
       "title": "Trouvez-nous",
       "subtitle": "Visitez notre magasin",
@@ -227,7 +230,11 @@
     "emailPlaceholder": "E-mail",
     "phonePlaceholder": "Téléphone",
     "namePlaceholder": "Nom",
-    "button": "Planifier votre session d'installation"
+    "button": "Planifier votre session d'installation",
+    "successMessage": "Votre formulaire a été envoyé avec succès ! Nous vous recontacterons prochainement.",
+    "errorMessage": "L'envoi du formulaire a échoué. Veuillez réessayer.",
+    "submitting": "Envoi du formulaire en cours..."
+
   }
 }
 
