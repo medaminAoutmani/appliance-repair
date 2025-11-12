@@ -11,7 +11,8 @@ function FormCard({ id }: FormCardProps) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: ''
+    phone: '',
+    service: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -38,7 +39,7 @@ function FormCard({ id }: FormCardProps) {
         },
         body: JSON.stringify({
           ...formData,
-          source: 'formCard',
+          source: 'Installation du climatiseur',
         }),
       });
 
@@ -48,7 +49,7 @@ function FormCard({ id }: FormCardProps) {
       if (response.ok && data.success) {
         setSubmitStatus('success');
         setErrorMessage('');
-        setFormData({ name: '', email: '', phone: '' });
+        setFormData({ name: '', email: '', phone: '', service: 'Installation du climatiseur' });
         // Reset status after 3 seconds
         setTimeout(() => setSubmitStatus('idle'), 3000);
       } else {

@@ -9,7 +9,7 @@ interface FormData {
   phone: string;
   service?: string;
   message?: string;
-  source: 'seventhSection' | 'formCard';
+  source: 'Réparation' | 'Installation du climatiseur';
 }
 
 interface WhatsAppRequestBody {
@@ -81,12 +81,12 @@ async function sendWhatsAppMessage(formData: FormData): Promise<{ success: boole
         type: 'text' as const,
         text: `📋 NEW SERVICE REQUEST
 
-👤 Customer: ${formData.name}
-📞 Phone: ${formData.phone}
+👤 Nom: ${formData.name}
+📞 Télé: ${formData.phone}
 📧 Email: ${formData.email || 'Not provided'}
 🛠️ Service: ${formData.service || 'Not specified'}
 💬 Message: ${formData.message || 'No additional message'}
-⏰ Submitted: ${new Date().toLocaleString()}
+⏰ Date: ${new Date().toLocaleString()}
 🔗 Source: ${formData.source}`
       }
     ];
@@ -159,12 +159,12 @@ async function sendTextMessage(formData: FormData, recipientNumber: string): Pro
   try {
     const apiUrl = `https://graph.facebook.com/${WHATSAPP_API_VERSION}/${WHATSAPP_PHONE_ID}/messages`;
 
-    const textMessage = `📋 New Service Request:
-👤 Name: ${formData.name}
-📞 Phone: ${formData.phone}
-📧 Email: ${formData.email || 'Not provided'}
-🛠️ Service: ${formData.service || 'Not specified'}
-💬 Message: ${formData.message || 'No additional message'}
+    const textMessage = `📋 Demande de service reçue:
+👤 Nom: ${formData.name}
+📞 Télé: ${formData.phone}
+📧 Email: ${formData.email || 'Non spécifié'}
+🛠️ Service: ${formData.service || 'Non spécifié'}
+💬 Message: ${formData.message || 'Aucun message additionnel'}
 📅 Date: ${new Date().toLocaleString()}
 🔗 Source: ${formData.source}`;
 
@@ -379,3 +379,4 @@ export async function DELETE() {
     { status: 405 }
   );
 }
+

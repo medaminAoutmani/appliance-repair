@@ -6,7 +6,7 @@ export interface IFormSubmission extends Document {
   phone: string;
   service?: string;
   message?: string;
-  source: 'seventhSection' | 'formCard';
+  source: 'Réparation' | 'Installation du climatiseur';
   createdAt: Date;
   whatsappSent: boolean;
   whatsappMessageId?: string;
@@ -36,7 +36,7 @@ const FormSubmissionSchema: Schema = new Schema(
     },
     source: {
       type: String,
-      enum: ['seventhSection', 'formCard'],
+      enum: ['Réparation', 'Installation du climatiseur'],
       required: true,
     },
     whatsappSent: {
