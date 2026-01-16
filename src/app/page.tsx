@@ -9,7 +9,6 @@ import SecondeSection from "@/pages/SecondeSection";
 import ThirdSection from "@/pages/ThirdSection";
 import ForthSection from "@/pages/ForthSection";
 import FifthSection from "@/pages/FifthSection";
-import SixthSection from "@/pages/SixthSection";
 import SeventhSection from "@/pages/SeventhSection";
 import Footer from "@/components/Footer";
 import { MotionDiv } from "@/lib/framer-motion";
