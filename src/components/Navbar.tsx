@@ -270,6 +270,7 @@ function Navbar({ className, isAtTop, visible }: { className?: string; isAtTop: 
                     {t('navbar.airConditioningInstallation')}
                   </button>
                 </div>
+                {/** 
                 <MotionP
                   transition={{ duration: 0.3 }}
                   className="text-left text-[#1c1f48] text-base font-bold cursor-pointer hover:text-[#04cf9c]"
@@ -277,6 +278,7 @@ function Navbar({ className, isAtTop, visible }: { className?: string; isAtTop: 
                 >
                   {t('navbar.reviews')}
                 </MotionP>
+                */}
               </MotionDiv>
             )}
           </AnimatePresence>

@@ -55,18 +55,23 @@ function Header() {
         </div>
         <div className='flex lg:hidden w-full h-full items-center justify-between '>
           <div className=' h-full flex items-center justify-center md:gap-5'>
-            <div className='w-auto flex items-center justify-center flex-row font-lato'>
+            <a href='tel:+212670687954' className='w-auto flex items-center justify-center flex-row font-lato'>
               <CallIcon sx={{ width: '20px', height: '20px', color: "#04cf9c" }} />
               <div className='text-base text-white font-lato tracking-normal font-extrabold ml-3'>{t('header.phone')}</div>
-            </div>
-            <div className='hidden md:flex w-auto items-center justify-center flex-row'>
+            </a>
+            <a href='mailto:tabridrraha@gmail.com' className='hidden md:flex w-auto items-center justify-center flex-row'>
               <DraftsIcon sx={{ width: '20px', height: '20px', color: "#04cf9c" }} />
               <div className='text-base text-white font-lato tracking-normal font-extrabold ml-3'>{t('header.email')}</div>
-            </div>
-            <div className='hidden md:flex w-auto items-center justify-center flex-row'>
+            </a>
+            <a
+              href='https://maps.app.goo.gl/ca29J4GmiUBve3Ud7'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='hidden md:flex w-auto items-center justify-center flex-row'
+            >
               <LocationOnIcon sx={{ width: '20px', height: '20px', color: "#04cf9c" }} />
               <div className='text-base text-white font-lato tracking-normal font-extrabold ml-3'>{t('header.location')}</div>
-            </div>
+            </a>
           </div>
           <div className='md:w-auto lg:w-60 h-full flex items-center justify-end gap-1 sm:gap-2 flex-shrink-0'>
             <div className="flex-shrink-0">
