@@ -20,15 +20,20 @@ function Header() {
           <div className=' h-full flex items-center justify-center lg:gap-10 xl:gap-20'>
             <div className='w-auto flex items-center justify-center flex-row font-lato'>
               <CallIcon sx={{ width: '20px', height: '20px', color: "#04cf9c" }} />
-              <div className='text-base text-white font-lato tracking-normal font-extrabold ml-3'>{t('header.phone')}</div>
+              <a href='tel:+212670687954' className='text-base text-white font-lato tracking-normal font-extrabold ml-3'>{t('header.phone')}</a>
             </div>
             <div className='hidden w-auto lg:flex items-center justify-center flex-row'>
               <DraftsIcon sx={{ width: '20px', height: '20px', color: "#04cf9c" }} />
-              <div className='text-base text-white font-lato tracking-normal font-extrabold ml-3'>{t('header.email')}</div>
+              <a href='mailto:tabridrraha@gmail.com' className='text-base text-white font-lato tracking-normal font-extrabold ml-3'>{t('header.email')}</a>
             </div>
             <div className='hidden w-auto lg:flex items-center justify-center flex-row'>
               <LocationOnIcon sx={{ width: '20px', height: '20px', color: "#04cf9c" }} />
-              <div className='text-base text-white font-lato tracking-normal font-extrabold ml-3'>{t('header.location')}</div>
+              <a
+                href='https://maps.app.goo.gl/ca29J4GmiUBve3Ud7'
+                target='_blank' rel='noopener noreferrer'
+                className='text-base text-white font-lato tracking-normal font-extrabold ml-3'>
+                {t('header.location')}
+              </a>
             </div>
           </div>
           <div className='w-auto h-full flex items-center justify-end gap-2 sm:gap-3 flex-shrink-0'>
