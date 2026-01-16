@@ -12,7 +12,7 @@ function FormCard({ id }: FormCardProps) {
     name: '',
     email: '',
     phone: '',
-    service: ''
+    service: 'Installation du climatiseur'
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
