@@ -40,12 +40,31 @@ function SeventhSection() {
     }));
   };
 
+  // Function to translate service value to French
+  const translateServiceToFrench = (serviceKey: string): string => {
+    const serviceTranslationMap: Record<string, string> = {
+      'refrigerator-repair': 'Réparation de réfrigérateur',
+      'washer-repair': 'Réparation de lave-linge',
+      'air-conditioner-repair': 'Réparation de climatiseur',
+      'freezer-repair': 'Réparation de congélateur',
+      'dishwasher-repair': 'Réparation de lave-vaisselle',
+      'dryer-repair': 'Réparation de sèche-linge',
+      'oven-repair': 'Réparation de four',
+      'stove-range-repair': 'Réparation de cuisinière et de table de cuisson',
+      'microwave-repair': 'Réparation de micro-ondes'
+    };
+    return serviceTranslationMap[serviceKey] || serviceKey;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
     try {
+      // Translate service to French before submission
+      const serviceInFrench = formData.service ? translateServiceToFrench(formData.service) : '';
+
       const response = await fetch('/api/submit-form', {
         method: 'POST',
         headers: {
@@ -53,6 +72,7 @@ function SeventhSection() {
         },
         body: JSON.stringify({
           ...formData,
+          service: serviceInFrench,
           source: 'Réparation',
         }),
       });
@@ -90,7 +110,7 @@ function SeventhSection() {
   };
 
   return (
-    <section id="contact" className="w-full h-full bg-white flex flex-col items-center justify-center pt-20 px-4 sm:pt-24 sm:px-6 md:pt-36 md:px-8 lg:pt-20 lg:px-0 xl:pt-24">
+    <section id="contact" className="w-full h-full bg-white flex flex-col items-center justify-center pt-20 px-4 sm:pt-24 sm:px-6 md:pt-36 md:px-8 lg:pt-20 lg:px-0 xl:pt-24 pb-14 sm:pb-16 lg:pb-20">
       <div
         ref={ref}
         className="relative h-full w-full max-w-[95%] sm:max-w-[90%] md:w-full lg:w-[90%] xl:w-[79%] flex flex-col lg:flex-row items-start justify-between gap-4 sm:gap-6 md:gap-12 lg:gap-12 xl:gap-16"

@@ -11,6 +11,7 @@ import ForthSection from "@/pages/ForthSection";
 import FifthSection from "@/pages/FifthSection";
 import SixthSection from "@/pages/SixthSection";
 import SeventhSection from "@/pages/SeventhSection";
+import Footer from "@/components/Footer";
 import { MotionDiv } from "@/lib/framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -49,7 +50,8 @@ export default function Home() {
             <ForthSection />
             <FifthSection />
             <SeventhSection />
-            <SixthSection />
+            {/* <SixthSection /> */}
+            <Footer />
           </div>
         </main>
       ) : (

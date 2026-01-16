@@ -234,6 +234,21 @@
     "successMessage": "Your form has been submitted successfully! We will contact you soon.",
     "errorMessage": "Failed to submit form. Please try again.",
     "submitting": "Submitting your request..."
+  },
+  "footer": {
+    "description": "Repair your home appliance\naffordably with a help of one of our\ncertified technicians.",
+    "navigation": {
+      "title": "Navigation",
+      "home": "Home",
+      "aboutUs": "About Us",
+      "services": "Services"
+    },
+    "workHours": {
+      "title": "Work Hours",
+      "hours": "9 AM - 6 PM, Mon - Sat"
+    },
+    "callUs": "Call Us",
+    "copyright": "© 2023 Tabrid RRaha • All Rights Reserved"
   }
 }
 

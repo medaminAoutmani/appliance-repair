@@ -234,7 +234,21 @@
     "successMessage": "Votre formulaire a été envoyé avec succès ! Nous vous recontacterons prochainement.",
     "errorMessage": "L'envoi du formulaire a échoué. Veuillez réessayer.",
     "submitting": "Envoi du formulaire en cours..."
-
+  },
+  "footer": {
+    "description": "Réparation de vos appareils ménagers\nà un prix abordable avec l'aide de l'un de nos\ntechniciens certifiés.",
+    "navigation": {
+      "title": "Navigation",
+      "home": "Accueil",
+      "aboutUs": "À propos",
+      "services": "Services"
+    },
+    "workHours": {
+      "title": "Heures de travail",
+      "hours": "9h - 18h, Lun - Sam"
+    },
+    "callUs": "Appelez-nous",
+    "copyright": "© 2023 Tabrid RRaha • Tous droits réservés"
   }
 }
 

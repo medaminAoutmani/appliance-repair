@@ -196,13 +196,13 @@ function Navbar({ className, isAtTop, visible }: { className?: string; isAtTop: 
                   </HoveredLink>
                 </div>
               </MenuItem>
-              <MotionP
+              {/*<MotionP
                 transition={{ duration: 0.3 }}
                 className="cursor-pointer text-[#1c1f48] text-base font-bold transition-all duration-200 hover:text-[#04cf9c] dark:text-white"
                 onClick={(event) => handleNavClick(event, "reviews")}
               >
                 {t('navbar.reviews')}
-              </MotionP>
+              </MotionP>*/}
             </MotionDiv>
             <MagicButton
               button="hidden lg:felx xl:flex h-8 hover:scale-110"

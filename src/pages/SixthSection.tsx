@@ -8,9 +8,9 @@ function SixthSection() {
   const testimonials = [
     {
       quote:
-        "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
-      name: "Sarah Chen",
-      designation: "Product Manager at TechFlow",
+        "The technician arrived on time and fixed my washing machine in less than an hour. Very professional, polite, and knowledgeable. I’m extremely satisfied and will definitely use this service again.",
+      name: "M. EL MAKKI",
+      designation: "Fast and reliable service",
       src: "/person1.avif",
     },
     {

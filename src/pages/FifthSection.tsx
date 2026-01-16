@@ -14,9 +14,9 @@ function FifthSection() {
       <Image
         src="/appliance6.jpg"
         alt='background1'
-        width={500}
-        height={500}
-        className='w-full h-full object-contain absolute mix-blend-overlay opacity-20'
+        width={100}
+        height={100}
+        className='w-full h-fit object-contain absolute mix-blend-overlay opacity-20'
       />
       <div className="relative h-full w-full lg:w-[90%] xl:w-[79%] flex flex-col items-center justify-center py-16 sm:py-24 gap-8 md:gap-10 xl:gap-20">
         <div className='text-xl sm:text-3xl lg:text-4xl xl:text-5xl font-lato text-wrap font-extrabold text-white lg:leading-tight max-w-5xl mx-auto text-center tracking-normal  '>
