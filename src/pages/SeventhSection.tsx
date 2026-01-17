@@ -40,12 +40,31 @@ function SeventhSection() {
     }));
   };
 
+  // Function to translate service value to French
+  const translateServiceToFrench = (serviceKey: string): string => {
+    const serviceTranslationMap: Record<string, string> = {
+      'refrigerator-repair': 'Réparation de réfrigérateur',
+      'washer-repair': 'Réparation de lave-linge',
+      'air-conditioner-repair': 'Réparation de climatiseur',
+      'freezer-repair': 'Réparation de congélateur',
+      'dishwasher-repair': 'Réparation de lave-vaisselle',
+      'dryer-repair': 'Réparation de sèche-linge',
+      'oven-repair': 'Réparation de four',
+      'stove-range-repair': 'Réparation de cuisinière et de table de cuisson',
+      'microwave-repair': 'Réparation de micro-ondes'
+    };
+    return serviceTranslationMap[serviceKey] || serviceKey;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
     try {
+      // Translate service to French before submission
+      const serviceInFrench = formData.service ? translateServiceToFrench(formData.service) : '';
+
       const response = await fetch('/api/submit-form', {
         method: 'POST',
         headers: {
@@ -53,6 +72,7 @@ function SeventhSection() {
         },
         body: JSON.stringify({
           ...formData,
+          service: serviceInFrench,
           source: 'Réparation',
         }),
       });
