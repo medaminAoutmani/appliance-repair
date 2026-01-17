@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Tabrid Rraha" }],
   creator: "Tabrid Rraha",
   metadataBase: new URL("https://tabrid-rraha.vercel.app"), // change if you add custom domain
+  verification: {
+    google: "tpA-ym_S_vOs04rG90S47y3fA5cvOqIXQT5jlBpTGfc",
+  },
 };
 
 

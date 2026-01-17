@@ -30,6 +30,9 @@ export const metadata: Metadata = {
       "en": "/",
     },
   },
+  verification: {
+    google: "tpA-ym_S_vOs04rG90S47y3fA5cvOqIXQT5jlBpTGfc",
+  },
   openGraph: {
     title: "Tabrid Rraha | Services de Réparation d'Appareils et Climatisation",
     description:
