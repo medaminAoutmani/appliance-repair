@@ -19,15 +19,23 @@ const translations = {
   fr: frTranslations,
 };
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>('en');
+export function LanguageProvider({ children, defaultLanguage = 'en' }: { children: ReactNode; defaultLanguage?: Language }) {
+  const [language, setLanguageState] = useState<Language>(defaultLanguage);
 
   useEffect(() => {
-    // Load saved language from localStorage
+    // Check URL path first, then localStorage
     if (typeof window !== 'undefined') {
-      const savedLang = localStorage.getItem('language') as Language;
-      if (savedLang && (savedLang === 'en' || savedLang === 'fr')) {
-        setLanguageState(savedLang);
+      const pathLang = window.location.pathname.startsWith('/fr') ? 'fr' : 'en';
+      
+      // If on /fr route, force French; otherwise check localStorage
+      if (pathLang === 'fr') {
+        setLanguageState('fr');
+        localStorage.setItem('language', 'fr');
+      } else {
+        const savedLang = localStorage.getItem('language') as Language;
+        if (savedLang && (savedLang === 'en' || savedLang === 'fr')) {
+          setLanguageState(savedLang);
+        }
       }
     }
   }, []);
