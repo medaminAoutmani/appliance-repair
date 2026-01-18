@@ -30,17 +30,25 @@ export default function FrenchHome() {
             <Header />
             <Hero />
             <MotionDiv
-              className='lg:w-[90%] xl:w-[79%] h-24 lg:h-28 xl:h-32 px-0 lg:px-12 lg:pl-8 py-7 lg:gap-3 xl:gap-0 relative flex flex-col-reverse lg:flex-row items-center justify-center bg-[#1c1f48] rounded-none lg:rounded-xl top-[-50px] mx-auto '
+              className='lg:w-[90%] xl:w-[79%] h-fit lg:h-28 xl:h-32 px-0 lg:px-12 lg:pl-8 pb-0 pt-2 sm:py-7 lg:gap-3 xl:gap-0 relative flex flex-col-reverse lg:flex-row items-center justify-center bg-[#1c1f48] rounded-none lg:rounded-xl top-[-50px] mx-auto '
               initial={{ opacity: 0, y: '100vh' }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 1 }}
             >
               <CarouselDemo />
-              <div className="hidden lg:flex items-center justify-end xl:w-auto lg:w-52 xl:flex-grow ">
+              <div className="  lg:flex items-center justify-end xl:w-auto lg:w-52 xl:flex-grow ">
                 <div className="flex items-center justify-center lg:w-[95%] xl:w-[80%] text-center font-semibold text-white lg:text-[22px] xl:text-2xl">
                   {t('page.repairingBrands')}
                 </div>
               </div>
+            </MotionDiv>
+            <MotionDiv
+              className="relative flex items-center justify-center px-2 font-sans font-normal text-neutral-600 text-xs text-center leading-5 dark:text-neutral-300 top-[-45px]"
+              initial={{ opacity: 0, y: '100vh' }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 1.1 }}
+            >
+              {t('page.description')}
             </MotionDiv>
             <FirstSection />
             <SecondeSection />

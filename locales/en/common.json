@@ -28,7 +28,8 @@
     "orderNow": "Contact Us Now!"
   },
   "page": {
-    "repairingBrands": "Repairing Your Trusted Brands!"
+    "repairingBrands": "We repair all brands!",
+    "description" : "The brands mentioned are the property of their respective owners. Our service is independent and not affiliated with the brands mentioned."
   },
   "features": {
     "title": "Explore Our Features for Quality !",

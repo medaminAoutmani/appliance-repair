@@ -28,7 +28,8 @@
     "orderNow": "Contactez-nous!"
   },
   "page": {
-    "repairingBrands": "Réparation de vos marques de confiance !"
+    "repairingBrands": "Réparation de toutes les marques!",
+    "description": "Les marques citées sont la propriété de leurs détenteurs respectifs. Notre service est indépendant et non affilié aux marques mentionnées."
   },
   "features": {
     "title": "Découvrez nos fonctionnalités de qualité !",
